@@ -1,0 +1,68 @@
+{ 
+    "projects":[
+        {
+            "id": 1,
+            "kind": "BRANDING, WEB DESIGN1",
+            "title": "Kleo Digital1",
+            "summary": "Podcasting operational change management inside of workflows to establish a new framework. Taking seamless key performance indicators offline and try maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on integration.",
+            "client": "Kleo Digital Agency1",
+            "date": "2018 - 2019",
+            "disciplines": "Art Direction, Photography1",
+            "artDirection": "Alan Walker, Helen Brown1",
+            "backgroundImage": "/portfolioDemo2/img/img-placeholder.png",
+            "researchAndPlanning": "Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. The digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line. Grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
+            "imgProject" : ["/portfolioDemo2/img/img-placeholder.png", "/portfolioDemo2/img/img-placeholder-2.png", "/portfolioDemo2/img/img-placeholder-3.png"],
+            "designAndDevelopment": "Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality lorem ipsum.",
+            "designAndDevelopmentAuthor": "Amelia Evans, George Wood1",
+            "linkSEO" : "Kleo-Digital-BRANDING-WEB-DESIGN1"
+        },
+        {
+            "id": 2,
+            "kind": "BRANDING, WEB DESIGN2",
+            "title": "Kleo Digital2",
+            "summary": "Podcasting operational change management inside of workflows to establish a new framework. Taking seamless key performance indicators offline and try maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on integration.",
+            "client": "Kleo Digital Agency2",
+            "date": "2019 - 2020",
+            "disciplines": "Art Direction, Photography2",
+            "artDirection": "Alan Walker, Helen Brown2",
+            "backgroundImage": "/portfolioDemo2/img/img-placeholder-2.png",
+            "researchAndPlanning": "Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. The digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line. Grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
+            "imgProject" : ["/portfolioDemo2/img/img-placeholder-3.png", "/portfolioDemo2/img/img-placeholder-4.png", "/portfolioDemo2/img/img-placeholder-5.png"],
+            "designAndDevelopment": "Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality lorem ipsum.",
+            "designAndDevelopmentAuthor": "Amelia Evans, George Wood2",
+            "linkSEO" : "Paul-Long-BRANDING-WEB-DESIGN2"
+        },
+        {
+            "id": 3,
+            "kind": "BRANDING, WEB DESIGN3",
+            "title": "Kleo Digital3",
+            "summary": "Podcasting operational change management inside of workflows to establish a new framework. Taking seamless key performance indicators offline and try maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on integration.",
+            "client": "Kleo Digital Agency3",
+            "date": "2020 - 2021",
+            "disciplines": "Art Direction, Photography3",
+            "artDirection": "Alan Walker, Helen Brown3",
+            "backgroundImage": "/portfolioDemo2/img/img-placeholder-3.png",
+            "researchAndPlanning": "Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. The digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line. Grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
+            "imgProject" : ["/portfolioDemo2/img/img-placeholder-4.png", "/portfolioDemo2/img/img-placeholder-5.png", "/portfolioDemo2/img/img-placeholder-6.png"],
+            "designAndDevelopment": "Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality lorem ipsum.",
+            "designAndDevelopmentAuthor": "Amelia Evans, George Wood3",
+            "linkSEO" : "Paul-Long-BRANDING-WEB-DESIGN3"
+        },
+        {
+            "id": 4,
+            "kind": "BRANDING, WEB DESIGN4",
+            "title": "Kleo Digital4",
+            "summary": "Podcasting operational change management inside of workflows to establish a new framework. Taking seamless key performance indicators offline and try maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on integration.",
+            "client": "Kleo Digital Agency4",
+            "date": "2021 - 2022",
+            "disciplines": "Art Direction, Photography4",
+            "artDirection": "Alan Walker, Helen Brown4",
+            "backgroundImage": "/portfolioDemo2/img/img-placeholder-4.png",
+            "researchAndPlanning": "Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. The digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line. Grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
+            "imgProject" : ["/portfolioDemo2/img/img-placeholder-5.png", "/portfolioDemo2/img/img-placeholder-6.png", "/portfolioDemo2/img/img-placeholder.png"],
+            "designAndDevelopment": "Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality lorem ipsum.",
+            "designAndDevelopmentAuthor": "Amelia Evans, George Wood4",
+            "linkSEO" : "Paul-Long-BRANDING-WEB-DESIGN4"
+        }
+    ]
+}

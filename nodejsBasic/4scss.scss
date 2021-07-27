@@ -1,0 +1,215 @@
+.container{
+    overflow-x: hidden;
+}
+
+$pink: #c69;
+$fontsegoe: "segoe ui light";
+$textSizeNormal: 15px;
+
+@mixin pictureLeft($widthPic){	//tính năng sử dụng lại code của scss
+	float: left;
+	width: $widthPic;
+	margin-right: 20px;
+}
+
+.jumbotron{
+	font-family: $fontsegoe;
+	width: 400px;
+	margin: auto;
+	background: #699;
+	h1{			//h1 trong .jumbotron (tính năng xếp chồng của scss)
+		color: $pink;
+	}
+	p{
+		color: #414141;
+		font: {	//ko cần phải viết font-family, font-size, ...
+			family: $fontsegoe;
+			size: $textSizeNormal;
+			weight: bold;
+			style: italic;
+		}
+	}
+	img{@include pictureLeft(50%);}
+}
+
+.card{
+	img{@include pictureLeft(20%);}
+}
+
+
+
+
+
+
+
+
+
+// Demo 6
+
+@mixin absoluteDemo6($top, $left, $zIndex) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	z-index: $zIndex;
+}
+@mixin visibleDemo6($width, $opacity, $visibility) {
+	width: $width;
+	opacity: $opacity;
+	visibility: $visibility;
+}
+@mixin paddingmargin($padding, $margin, $borderRadius) {
+	padding: $padding;
+	margin: $margin;
+	border-radius: $borderRadius;
+}
+@mixin fontFormat($family, $size, $weight, $textTransform, $transition) {
+	font: {family:$family; size:$size; weight: $weight;}
+	text-transform: $textTransform;
+	transition: $transition;
+}
+@mixin alignCenter {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+@mixin backgroundAndColor($background, $color, $border) {
+	background: $background;
+	color: $color;
+	border: $border;
+}
+@mixin setAttribute($width, $height, $border, $borderRadius) {
+	width: $width;
+	height: $height;
+	border: $border;
+	border-radius: $borderRadius;
+}
+$backgroundImagePrevButn: -webkit-linear-gradient(0deg, black 0%, gray 40%, #ffffff00 100%);
+$backgroundImageNextButn: -webkit-linear-gradient(180deg, black 0%, gray 40%, #ffffff00 100%);
+
+
+.bannerDemo6{
+	position: relative;
+	overflow: hidden;
+	.container-fluid .row .col-sm-10.text-center .container .row.text-center{
+		.col-3 img.ml-1.mb-0{
+			@include alignCenter();
+			@include visibleDemo6(50%,0,hidden);
+			padding: 0;
+			transform: scale(1);
+		}
+		.col-4.btn-danger {
+			@include alignCenter();
+			@include paddingmargin(auto,3px 0 0 0, 1px 1px 10px 10px);
+			@include visibleDemo6(none,0,hidden);
+			@include fontFormat(cursive,25px,bold,none,0);
+			z-index: 3;
+		}
+	}
+	.jumbotronDemo6{@include absoluteDemo6(35%, 0, 1);}
+	nav.navbar{
+		@include absoluteDemo6(0, 0, 3);
+		background: #000000d4!important;
+		font-weight: bold;
+		transform: translateY(-50px);
+		.container-fluid .row .col-12 button.navbar-toggler.ml-auto{
+			@include backgroundAndColor(white,black,none)
+		}
+	}
+}
+
+.backgroundMenuDemo6{
+	position: relative;
+	a.navbar-brand{
+		@include visibleDemo6(100%,1 ,visible);
+		.row .col-sm-8{
+			@include alignCenter();
+			@include fontFormat(cursive,25px,bold,none,0);
+			@include paddingmargin(0, 15px 0 15px 0, 1px 1px 10px 10px);
+		}
+	}
+	.col-lg-8.text-center {
+		ul {
+			li{
+				a{
+					@include fontFormat(fantasy,16px,none,uppercase,.4s);	
+					&:hover{
+						background: #d9534f;
+						border-radius: 0 0 10px 10px;
+					}
+				}
+				a.btn{border-color: white;
+					&:hover{color: white; border-color: #d9534f;}
+				}
+			}
+			li.active a {
+				color: orange;
+			}
+			li.dropdown {
+				position: relative;
+				.dropdown-menu{
+					@include absoluteDemo6(auto, 46% ,auto);
+					a{@include backgroundAndColor(none,white,none);
+						&:hover{@include backgroundAndColor(white,black,none);};
+					};
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+.noidungDemo6 .row .col-sm-8.push-sm-1, .noidungDemo6 .row .col-sm-7 {
+	@include alignCenter();
+}
+#myCarouselDemo6{
+	a.carousel-control-prev{background-image: $backgroundImagePrevButn;}
+	a.carousel-control-next{background-image: $backgroundImageNextButn;}
+	a span.carousel-control-next-icon, .bannerDemo6 #myCarouselDemo6 a span.carousel-control-prev-icon{
+		transform: scale(2.5);
+	}
+}
+#myCarouselDemo7.carousel.slide {
+    background: rgba(128, 128, 128, 0.123);
+    padding-bottom: 45px;
+	ol.carousel-indicators{
+		li {background: gray;}
+		li.active { background: orangered;}
+	}
+	.carousel-inner .carousel-item img{@include setAttribute(20%,auto,none,50%)}
+}
+.serviceDemo6{
+	overflow: hidden;
+	.col-xs-12.text-center h3{
+		font-size: 15px;
+		width: 360px;
+		@include backgroundAndColor(black,#fff600,none);
+		@include paddingmargin(18px 20px,auto,5px);
+	}
+	.container-fluid{
+		background: #6b6b6b;
+		.col-sm-3{
+			.col-10.mt-0.ml-0.mr-0.mb-0.pl-0.pr-0.pb-0 h4 {
+				color: #fff600;
+				font-size: 15px;
+				margin-bottom: 20px;
+				display: block;
+				margin-top: 10px;
+			}
+			.row p {
+				@include fontFormat(sans-serif,12px,none,none,0);
+				color: #e6e6e6;
+				line-height: 24px;
+			}
+		}
+	}
+}
+
+
+
+@import "4scssmobile";	//import thêm file _4scssmobile.scss, chú ý tên file phải có dấu _, nhưng ở đây khi import ko cần dấu _

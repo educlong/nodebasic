@@ -1,0 +1,27 @@
+<!-- Khai báo biến: xem tại embed ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <!-- EJS BASIC -->
+    <% var b=29; %>                 <!--Khai báo biến-->
+    <h2>b=<%= b %></h2>
+
+    <% for(var i=0;i<20;i++){  %>  <!--vòng for-->
+        <b><%= i %>, </b>
+    <% } %>                         <!-- Vòng forEach -->
+
+    <%  var arr1 = ["PHP", "Angular js", "node js"];
+        arr1.forEach(function(language){            %>
+          <li><%= language%></li>
+    <%  }) %>
+    <% var y ="<h2 style='color: red;'> EJS </h2>"  %>  <!--khai báo 1 thẻ của html đặt vào biến y-->
+    <%- y %>  <!--để in thẻ ra, ko dùng dấu =, mà dùng dấu -  -->
+  </body>
+</html>

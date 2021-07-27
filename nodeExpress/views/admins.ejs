@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <%= JSON.stringify(listSv)  %>  <!--tương tự var_dump trong php, in ra 1 object, trong object này là 1 mảng-->
+    <!--listSv là 1 object, studentLst là 1 mảng, và student là 1 phần tử trong mảng studentLst, forEach lấy ra-->
+    <h6><%= adminIndex %></h6>
+    <% listSv.studentLst.forEach(function(student){ %>
+            <li><%= student %></li>
+    <% }) %> 
+    <% %>  
+</body>
+</html>
