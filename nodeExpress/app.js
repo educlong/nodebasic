@@ -6,8 +6,8 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var blogDemo1 = require('./routes/blogDemo1');            /**Định nghĩa cho routes cho routes/templateBlogDemo1.js */
-// var portfolioDemo2 = require('./routes/portfolioDemo2');  /**Định nghĩa cho routes cho routes/portfolioDemo2.js */
+// var blogDemo1 = require('./routes/blogDemo1');            /**Định nghĩa cho routes cho routes/templateBlogDemo1.js */
+var portfolioDemo2 = require('./routes/portfolioDemo2');  /**Định nghĩa cho routes cho routes/portfolioDemo2.js */
 
 // getting-started.js
 const mongoose = require('mongoose');   /**include mongoose vào project và mở kết nối để test database trên localhost*/
@@ -37,12 +37,12 @@ app.use(session({               /**Cấu hình cho session */
 }))
 
 app.use(express.static(path.join(__dirname, 'public')));
-// app.use("/portfolioDemo2",express.static(__dirname + "/portfolioDemo2"));/*Cấu hình đường dẫn cố định cho project Demo2*/
+app.use("/portfolioDemo2",express.static(__dirname + "/portfolioDemo2"));/*Cấu hình đường dẫn cố định cho project Demo2*/
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/blogDemo1', blogDemo1);                   /**Định nghĩa cho routes cho routes/templateBlogDemo1.js */
-// app.use('/portfolioDemo2', portfolioDemo2);         /**Định nghĩa cho routes cho routes/templateBlogDemo1.js */
+// app.use('/blogDemo1', blogDemo1);                   /**Định nghĩa cho routes cho routes/templateBlogDemo1.js */
+app.use('/portfolioDemo2', portfolioDemo2);         /**Định nghĩa cho routes cho routes/portfolioDemo2.js */
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -62,6 +62,6 @@ app.use(function(err, req, res, next) {
 
 
 /**Cấu hình locals để load file từ models ra views, tên locals này là fakeDataPortfolioDemo2, locals này đc */
-// app.locals.fakeDataPortfolioDemo2 = require("./models/projects.json");  /**require từ file json trong models*/
+app.locals.fakeDataPortfolioDemo2 = require("./models/projects.json");  /**require từ file json trong models*/
 
 module.exports = app;

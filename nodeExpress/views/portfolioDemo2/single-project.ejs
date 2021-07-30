@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Metas -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title><%= title %>. id = <%= id1Project %></title>
+	<meta name="description" content="Satie - Agency & Portfolio HTML Template">
+
+	<!-- External CSS -->
+	<link rel="stylesheet" href="/portfolioDemo2/css/fontawesome-all.min.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="/portfolioDemo2/css/main.css">
+	<link rel="stylesheet" href="/portfolioDemo2/css/colors.css">
+	<link rel="stylesheet" href="/portfolioDemo2/css/responsive.css">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600%7CQuestrial" rel="stylesheet">
+
+	<!-- Favicon -->
+	<link rel="icon" href="/portfolioDemo2/img/favicon.png">
+</head>
+<body>
+	
+	<!-- ========== Header ========== -->
+
+	<div class="project-cover">
+
+		<% include header %>    <!--include file header.ejs vào dùng chung cho cả page-->
+
+	</div> <!-- /.project-cover -->
+
+	<!-- ========== Main ========== -->
+
+	<main class="single-project">
+
+		<div class="container">
+			<% fakeDataPortfolioDemo2.projects.forEach(function(aProject){
+				if(aProject.id == id1Project){	%>
+					<div class="intro">
+
+						<div class="info">
+
+							<h2><%= aProject.kind %></h2>
+							<h1><%= aProject.title %></h1>
+							<p><%= aProject.summary %></p>
+
+						</div> <!-- /.info -->
+
+						<ul class="details">
+
+							<li>client <span><%= aProject.client %></span></li>
+							<li>date <span><%= aProject.date %></span></li>
+							<li>disciplines <span><%= aProject.disciplines %></span></li>
+
+						</ul> <!-- /.details -->
+
+						<div class="clearfix"></div>
+
+					</div> <!-- /.intro -->
+
+					<div class="project-img-full">
+						<img src="<%= aProject.backgroundImage %>" alt="" class="img-cover">
+					</div>
+
+					<div class="project-description">
+						
+						<h2><span>01</span>research &amp; planning</h2>
+
+						<div class="content">
+							<p><%= aProject.researchAndPlanning %></p>
+						</div>
+
+						<div class="clearfix"></div>
+
+					</div> <!-- /.project-description -->
+
+					<div class="project-img-halved">
+						
+						<div class="item">
+							<img src="<%= aProject.imgProject[1] %>" alt="" class="img-cover">
+						</div>
+
+						<div class="item">
+							<img src="<%= aProject.imgProject[2] %>" alt="" class="img-cover">
+						</div>
+
+						<div class="clearfix"></div>
+
+					</div> <!-- /.project-img-halved -->
+
+					<div class="project-description">
+						
+						<h2><span>02</span>design &amp; development</h2>
+
+						<div class="content">
+							<p><%= aProject.designAndDevelopment %></p>
+						</div>
+
+						<div class="clearfix"></div>
+
+					</div> <!-- /.project-description -->
+
+					<div class="project-img-full">
+						<img src="<%= aProject.imgProject[0] %>" alt="" class="img-cover">
+					</div>
+
+					<ul class="extended-project-details">
+
+						<li>client <span><%= aProject.client %></span></li>
+						<li>date <span><%= aProject.date %></span></li>
+						<li>disciplines <span><%= aProject.disciplines %></span></li>
+						<li>art direction <span><%= aProject.artDirection %></span></li>
+						<li>design &amp; development <span><%= aProject.designAndDevelopmentAuthor %></span></li>
+
+					</ul> <!-- /.extended-project-details -->
+
+				<%	}
+			}) %>
+		</div> <!-- /.container -->
+		
+	</main> <!-- /.single-project -->
+
+	<div class="next-project">
+			
+		<div class="container">
+
+			<h2>next project</h2>
+			<h1><a href="/portfolioDemo2/single-project-demo2">daphne</a></h1>
+
+		</div> <!-- /.container -->
+
+	</div> <!-- /.next-project -->
+
+	<hr>
+	<h1>HISTORY</h1>	<!--In ra các projects đã xem-->
+	<main class="portfolio-page">
+
+		<div class="container-large">
+
+			<div class="portfolio-cards">
+				<% if(idProjectHistory.length==0){ %>
+					<div class="row text-center">Nothing (no project)</div>	<!--Nếu idProjectHistory k có zì thì in ra "nothing"-->
+				<% }
+				   else idProjectHistory.forEach(function(id1ProjectHistory){ 
+						fakeDataPortfolioDemo2.projects.forEach(function(aProject){	/*Nếu có data trong idProjectHistory thì in ra*/
+							if(aProject.id==id1ProjectHistory && id1ProjectHistory != id1Project){ %>			
+								<a href="/portfolioDemo2/single-project-demo2/<%= aProject.linkSEO %>.<%= aProject.id %>">
+									<div class="portfolio-item">			   <!--Nhưng các history ko chứa id của project hiện-->
+										<img src="<%= aProject.backgroundImage %>" alt="" class="img-cover"><!--tại, do đó phải-->
+										<div class="portfolio-item-overlay"><!--kèm điều kiện && id1ProjectHistory != id1Project-->
+											<div class="info">
+												<h2 class="portfolio-item-title"><%= aProject.title %></h2>
+												<h3 class="portfolio-item-category"><%= aProject.disciplines %></h3>
+											</div>
+										</div>
+									</div>
+								</a>
+				<% 			}
+						})
+					}) %>
+				<div class="clearfix"></div>
+
+			</div> <!-- /.portfolio-cards -->
+			
+		</div> <!-- /.container-large -->
+			
+	</main> <!-- /.portfolio-page -->
+
+
+	<footer class="footer-extended">
+		<% include footer2 %>    <!--include file footer2.ejs vào dùng chung cho cả page-->
+	</footer>
+	<% include full-screen-nav %>    <!--include file full-screen-nav.ejs vào dùng chung cho cả page-->
+	
+	<script src="/portfolioDemo2/js/jquery-3.6.0.min.js"></script>
+	<script src="/portfolioDemo2/js/main.js"></script>
+	
+</body>
+</html>
