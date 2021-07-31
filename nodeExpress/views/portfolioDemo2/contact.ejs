@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Metas -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title><%= title %></title>
+	<meta name="description" content="Satie - Agency & Portfolio HTML Template">
+
+	<!-- External CSS -->
+	<link rel="stylesheet" href="/portfolioDemo2/css/fontawesome-all.min.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="/portfolioDemo2/css/main.css">
+	<link rel="stylesheet" href="/portfolioDemo2/css/colors.css">
+	<link rel="stylesheet" href="/portfolioDemo2/css/responsive.css">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600%7CQuestrial" rel="stylesheet">
+
+	<!-- Favicon -->
+	<link rel="icon" href="/portfolioDemo2/img/favicon.png">
+</head>
+<body>
+
+	<!-- ========== Header ========== -->
+	<% include header %>    <!--include file header.ejs vào dùng chung cho cả page-->
+
+	<!-- ========== Main ========== -->
+
+	<main class="contact">
+
+		<div class="container">
+			
+			<h1>Ready to start a project?</h1>
+
+			<form action="#" class="contact-form">
+					
+				<input  name="name" placeholder="Name *" type="text" required>
+				<input  name="email" placeholder="Email *" type="email" required>
+				<textarea name="message" required=""></textarea>
+				<input type="submit" value="send message">
+				<div class="clearfix"></div>
+
+			</form>
+
+			<ul class="contact-info">
+				<li>contact</li>
+				<li><span class="mailaddress">satie-design@mail.com</span></li>
+				<li><span class="mailaddress">work-satie@mail.com</span></li>
+				<li>+3809812345</li>
+			</ul>
+
+			<div class="clearfix"></div>
+
+		</div> <!-- /.container -->
+		
+	</main> <!-- /.contact -->
+
+	<footer class="footer-extended footer-bg-grey">
+		<% include footer2 %>    <!--include file footer2.ejs vào dùng chung cho cả page-->
+	</footer>
+	<% include full-screen-nav %>    <!--include file full-screen-nav.ejs vào dùng chung cho cả page-->
+
+	<script src="/portfolioDemo2/js/jquery-3.6.0.min.js"></script>
+	<script src="/portfolioDemo2/js/main.js"></script>
+	
+</body>
+</html>

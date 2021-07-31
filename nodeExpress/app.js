@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-// var blogDemo1 = require('./routes/blogDemo1');            /**Định nghĩa cho routes cho routes/templateBlogDemo1.js */
+var blogDemo1 = require('./routes/blogDemo1');            /**Định nghĩa cho routes cho routes/templateBlogDemo1.js */
 var portfolioDemo2 = require('./routes/portfolioDemo2');  /**Định nghĩa cho routes cho routes/portfolioDemo2.js */
 
 // getting-started.js
@@ -41,8 +41,8 @@ app.use("/portfolioDemo2",express.static(__dirname + "/portfolioDemo2"));/*Cấu
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-// app.use('/blogDemo1', blogDemo1);                   /**Định nghĩa cho routes cho routes/templateBlogDemo1.js */
-app.use('/portfolioDemo2', portfolioDemo2);         /**Định nghĩa cho routes cho routes/portfolioDemo2.js */
+app.use('/blogDemo1', blogDemo1);                   /**Định nghĩa cho routes cho routes/templateBlogDemo1.js */
+app.use('/portfolioDemo2', portfolioDemo2);         /**Định nghĩa cho routes cho routes/templateBlogDemo1.js */
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
