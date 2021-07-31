@@ -106,6 +106,8 @@
     Bước 26: Phần kết nối csdl: Để có thể kết nối vs tất cả các file thì nên để trong file app.js -> vào file app.js để connect
     Bước 27: Phần kết nối đến collection: Mongoose yêu cầu tạo ra 1 file models để kết nối (đã tạo)
         Trong models, tạo 1 file adminProject.js (đây là file chứa collection cần truy vấn), models sẽ kết nối vs collection là adminProject
+
+    TƯƠNG TÁC VS DATABASE POSTGRESQL
     Bước 28: Cài đặt database Postgresql tại https://www.postgresql.org/download/ => nặng hơn rất nhiều.
         Sau khi cài đặt -> mở công cụ để quản lý hệ quản trị csdl này: cửa sổ + pgadmin
     Bước 29: Cài đặt thêm 1 module để zao tiếp vs postgresql trong nodejs, gõ: npm install pg
